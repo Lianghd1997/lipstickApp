@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:screenOrientation="portrait">
+
+    <ImageView
+        android:id="@+id/photo_first"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <ImageView
+        android:id="@+id/photo_second"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <Button
+        android:id="@+id/select_photo_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_button"
+        android:background="@mipmap/first"/>
+
+    <Button
+        android:id="@+id/compare_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/compare_first"
+        android:background="@mipmap/second"/>
+
+    <Button
+        android:id="@+id/compare_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/compare_second"
+        android:background="@mipmap/second"/>
+
+    <Button
+        android:id="@+id/compare_final_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/compare_final"
+        android:background="@mipmap/third"/>
+
+</LinearLayout>

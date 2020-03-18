@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="azwoo"></div>
+<div class="azwot">
+    <input type="file" name="" class="fileinput13" data-id="9" multiple="multiple">
+    <span>选择图片</span>
+</div>
+</body>
+<script>
+    $(" .fileinput13").change(function () {
+        var file = this.files[0];
+        readFile(file,$(this).parent().siblings(".azwoo"));
+        image_id=$(this).attr("data-id");
+    });
+    var on =document.querySelector(".azwoo");
+    //发请求开始
+
+    function readFile(file,element) {
+        //        新建阅读器
+        var reader = new FileReader();
+        //        根据文件类型选择阅读方式
+        switch (file.type){
+            case 'image/jpg':
+            case 'image/png':
+            case 'image/jpeg':
+            case 'image/gif':
+                reader.readAsDataURL(file);
+                break;
+        };
+        //        当文件阅读结束后执行的方法
+        reader.addEventListener('load',function () {
+            //         如果说让读取的文件显示的话 还是需要通过文件的类型创建不同的标签
+            switch (file.type){
+                case 'image/jpg':
+                case 'image/png':
+                case 'image/jpeg':
+                case 'image/gif':
+                    var img = document.createElement('img');
+                    img.src = reader.result;
+                    console.log(image_id+img.src);
+                    element.append(img);
+                    element.show();
+                    $.ajax({
+                        type:"post",
+                        url:"http://192.168.0.171:8080/WSHD/jiekou7/ADImage",
+                        dataType:"json",
+                        data:{
+                            image:img.src,
+                            style:4,
+                            id:image_id
+                        },
+                        success:function(res){
+                            console.log("上传成功！！！！！！！！！");
+
+                        }
+                    });//请求结束
+
+                    break;
+            }
+        });
+
+    };//readFile函数结束
+</script>
+</html>

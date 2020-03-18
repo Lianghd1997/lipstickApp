@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:screenOrientation="portrait"
+    tools:context=".MultiActivity">
+
+
+    <Button
+        android:id="@+id/compare_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/compare_button"
+        android:padding="45dp"
+        android:background="@mipmap/first"/>
+
+    <Button
+        android:id="@+id/face_database"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/face_database"
+        android:padding="45dp"
+        android:background="@mipmap/second"/>
+
+    <Button
+        android:id="@+id/face_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/face_search"
+        android:padding="45dp"
+        android:background="@mipmap/third"/>
+
+</LinearLayout>

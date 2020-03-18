@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1><a href="/">首页</a><small>口红信息</small></h1>
+    <hr>
+
+    <form>
+        <div class="form-group">
+            <label >口红品牌</label>
+            <input type="text" class="form-control" value="{{ brand }}">
+        </div>
+        <div class="form-group">
+            <label>名字</label>
+            <input type="text" value="{{ name }}" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>色号</label>
+            <input type="text"  value="{{ id }}" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>色号名字</label>
+            <input type="text"  value="{{ colorname }}" class="form-control">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

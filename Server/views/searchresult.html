@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1>识别的用户信息</h1>
+    <hr>
+
+    <form>
+        <div class="form-group">
+            <label for="">组名</label>
+            <input type="text" class="form-control" value="{{ groupid }}" id=""  >
+        </div>
+        <div class="form-group">
+            <label for="">用户id</label>
+            <input type="text" value="{{ userid }}" class="form-control" id="">
+        </div>
+        <div class="form-group">
+            <label for="">用户信息</label>
+            <input type="text"  value="{{ userinfo }}" class="form-control" id="" >
+        </div>
+        <div class="form-group">
+            <label for="">相似度</label>
+            <input type="text"  value="{{ score }}" class="form-control" id="">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

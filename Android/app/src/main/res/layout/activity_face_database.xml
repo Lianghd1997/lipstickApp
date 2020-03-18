@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:screenOrientation="portrait">
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@mipmap/back"/>
+
+    <Button
+        android:id="@+id/select_photo_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_button"
+        android:background="@mipmap/first"/>
+
+    <Button
+        android:id="@+id/face_database_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/face_database"
+        android:background="@mipmap/second"/>
+
+</LinearLayout>

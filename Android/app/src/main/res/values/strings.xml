@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Lipstick Prince</string>
+    <string name="hello_text">欢迎来到口红识色器</string>
+    <string name="take_button">拍照</string>
+    <string name="select_button">从相册选择</string>
+    <string name="upload_button">识别色号</string>
+    <string name="mix_button">显示图片库</string>
+    <string name="multi_button">更多功能</string>
+
+    <string name="compare_button">人脸对比</string>
+    <string name="compare_first">上传人脸1</string>
+    <string name="compare_second">上传人脸2</string>
+    <string name="compare_final">人脸对比</string>
+
+    <string name="face_database">上传人脸库</string>
+    <string name="face_search">人脸检索</string>
+
+    <string name="reaction_text">识别出的口红信息</string>
+    <string name="list_lipstick">list all lipsticks</string>
+
+    <string name="list_all">all lipsticks are as follows</string>
+</resources>

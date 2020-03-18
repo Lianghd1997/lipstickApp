@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+    <style type="text/css">
+        li{
+            list-style: none;
+            display: inline-block;
+        }
+        li img{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1>您上传的照片墙</h1>
+<a href="/upload" class="btn btn-success">上传照片</a>
+<a href="/picture" class="btn btn-success">识别口红颜色</a>
+<div id="app">
+    <ul>
+        <li v-for="img of images">
+            <img :src="'public/uploads/'+img" alt="" width="300px">
+        </li>
+    </ul>
+</div>
+
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            images:[]
+        },
+        created(){
+            fetch("/files",{method:'GET'})
+                .then(res=>res.json())
+                .then(files=>{
+                    this.images.push(...files)
+                })
+        }
+    })
+</script>
+</body>
+</html>
